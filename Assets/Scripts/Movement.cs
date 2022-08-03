@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
-        _rigidbody.MovePosition(_rigidbody.position + direction * _moveSpeed * Time.deltaTime);
+        _rigidbody.MovePosition(_rigidbody.position + direction * _moveSpeed);
         RotateInDirection(direction);
     }
 

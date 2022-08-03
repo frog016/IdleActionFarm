@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
         _inputSystem = new JoystickInput(FindObjectOfType<Joystick>());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         TryMove();
     }
@@ -23,6 +23,6 @@ public class CharacterController : MonoBehaviour
         if (direction.magnitude < 1e-4)
             return;
 
-        _movement.Move(direction);
+        _movement.Move(direction * Time.fixedDeltaTime);
     }
 }
