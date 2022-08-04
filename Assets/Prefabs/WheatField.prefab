@@ -85,6 +85,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8044516066322481031}
     m_Modifications:
+    - target: {fileID: 528092120251420199, guid: 7fbf973813c8955479df347813568028, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 528092120251420199, guid: 7fbf973813c8955479df347813568028, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5398486606346859130, guid: 7fbf973813c8955479df347813568028, type: 3}
       propertyPath: m_Name
       value: FieldModel

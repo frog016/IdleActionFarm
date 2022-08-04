@@ -14,6 +14,5 @@ public class AnimationController : MonoBehaviour
     private void FixedUpdate()
     {
         _animator.SetFloat("WalkSpeed", _rigidbody.velocity.magnitude);
-        Debug.Log(_animator.GetFloat("WalkSpeed"));
     }
 }
