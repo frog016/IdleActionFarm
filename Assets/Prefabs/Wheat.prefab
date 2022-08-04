@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4813245524472893014}
+  - component: {fileID: 3360588684140873185}
+  - component: {fileID: 8530095299886377976}
   m_Layer: 0
   m_Name: Wheat
   m_TagString: Untagged
@@ -24,13 +26,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4813245524472893013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.188, y: 0, z: -0.721}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6952772586668896338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3360588684140873185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4813245524472893013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8530095299886377976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4813245524472893013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc427477fded4de48afd78a87c247eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheatBlockPrefab: {fileID: 7277337293759049447, guid: b03f6a3d9429b1646ba2bff2a91ff3cc, type: 3}
 --- !u!1001 &4813245525330953796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,7 +72,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2499815110515504662, guid: 6ad41c3a96ccb9b4a976b898cc82295a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2499815110515504662, guid: 6ad41c3a96ccb9b4a976b898cc82295a, type: 3}
       propertyPath: m_LocalPosition.y
