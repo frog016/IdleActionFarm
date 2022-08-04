@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class JoystickInput : IInputSystem
@@ -7,6 +8,11 @@ public class JoystickInput : IInputSystem
     public JoystickInput(Joystick joystick)
     {
         _joystick = joystick;
+    }
+
+    public bool IsActionButtonUsed()
+    {
+        return Input.touches.Any(touch => touch.phase == TouchPhase.Began);
     }
 
     public Vector3 GetMoveDirection()

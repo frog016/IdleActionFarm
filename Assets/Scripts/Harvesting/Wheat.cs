@@ -15,10 +15,10 @@ public class Wheat : MonoBehaviour
 
     private void OnTriggerEnter(Collider otherCollider)
     {
-        if (otherCollider.GetComponent<Sickle>() == null)
+        if (otherCollider.GetComponent<Scythe>() == null)
             return;
 
-        Instantiate(_wheatBlockPrefab, transform.position, Quaternion.identity);
+        Instantiate(_wheatBlockPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
         OnWheatSlicedEvent.Invoke();
         Destroy(gameObject);
     }

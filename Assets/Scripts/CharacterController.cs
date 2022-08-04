@@ -1,15 +1,23 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Movement))]
+[RequireComponent(typeof(Movement), typeof(Harvester))]
 public class CharacterController : MonoBehaviour
 {
     private Movement _movement;
+    private Harvester _harvester;
     private IInputSystem _inputSystem;
 
     private void Awake()
     {
         _movement = GetComponent<Movement>();
+        _harvester = GetComponent<Harvester>();
         _inputSystem = new JoystickInput(FindObjectOfType<Joystick>());
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1) && _harvester.CanUse)
+            _harvester.HarvestWheat();
     }
 
     private void FixedUpdate()
