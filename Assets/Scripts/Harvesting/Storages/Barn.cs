@@ -29,7 +29,8 @@ public class Barn : MonoBehaviour
                 .OnComplete(() =>
                 {
                     _seller.ReceiveMoniesInPosition(_salePointTransform.position);
-                    Destroy(deletedBlock);
+                    deletedBlock.SetActive(false);
+                    Destroy(deletedBlock, 0.5f);
                     tweener.Kill();
                 });
             yield return new WaitForSeconds(_pickUpDelay);

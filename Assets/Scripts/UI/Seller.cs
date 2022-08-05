@@ -22,16 +22,17 @@ public class Seller : MonoBehaviour
         var endPosition = _canvas.GetComponentInChildren<MoneyText>().GetComponent<RectTransform>().position;
         for (var i = 0; i < _wheatBlockCost; i++)
         {
+            yield return new WaitForSeconds(_delay);
             var coin = Instantiate(_moneyPrefab, position, Quaternion.identity, _canvas.transform);
             var tweener = coin.GetComponent<RectTransform>().DOMove(endPosition, _flyDuration);
             tweener
                 .OnComplete(() =>
                 {
                     _wallet.AddMoney(1);
-                    Destroy(coin);
+                    coin.SetActive(false);
+                    Destroy(coin, 0.5f);
                     tweener.Kill();
                 });
-            yield return new WaitForSeconds(_delay);
         }
     }
 }

@@ -28,10 +28,11 @@ public class Field : MonoBehaviour
     {
         var startPosition = new Vector3(-_wheatFieldSize.x + _wheatSize.x, 0, _wheatFieldSize.z - _wheatSize.z) / 2;
         var position = startPosition;
+        var fieldSize = new Vector3Int(Mathf.FloorToInt(_wheatFieldSize.x / _wheatSize.x), 0, Mathf.FloorToInt(_wheatFieldSize.z / _wheatSize.z));
 
-        for (var x = 0; x < (int)(_wheatFieldSize.x / _wheatSize.x); x++)
+        for (var x = 0; x < fieldSize.x; x++)
         {
-            for (var z = 0; z < (int)(_wheatFieldSize.z / _wheatSize.z); z++)
+            for (var z = 0; z < fieldSize.z; z++)
             {
                 var wheat = Instantiate(_wheatPrefab, _plantedWheatTransform);
                 wheat.transform.localPosition = position;

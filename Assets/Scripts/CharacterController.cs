@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        //Input.GetMouseButtonDown(1)
         if (Input.GetMouseButtonDown(1) && _harvester.CanUse)
             _harvester.HarvestWheat();
     }
